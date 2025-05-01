@@ -2,12 +2,12 @@
   {
     "name": "Alice Johnson",
     "votes": 0,
-    "voted": true
+    "voted": false
   },
   {
     "name": "Bob Smith",
-    "votes": 1,
-    "voted": true
+    "votes": 0,
+    "voted": false
   },
   {
     "name": "Charlie Lee",
@@ -47,6 +47,6 @@
   {
     "name": "Julia Adams",
     "votes": 0,
-    "voted": false
+    "voted": true
   }
 ]
