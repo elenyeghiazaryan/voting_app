@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Alice Johnson",
+    "votes": 0,
+    "voted": true
+  },
+  {
+    "name": "Bob Smith",
+    "votes": 1,
+    "voted": true
+  },
+  {
+    "name": "Charlie Lee",
+    "votes": 0,
+    "voted": false
+  },
+  {
+    "name": "Diana Cruz",
+    "votes": 0,
+    "voted": false
+  },
+  {
+    "name": "Ethan White",
+    "votes": 0,
+    "voted": false
+  },
+  {
+    "name": "Fiona Green",
+    "votes": 0,
+    "voted": false
+  },
+  {
+    "name": "George Brown",
+    "votes": 1,
+    "voted": false
+  },
+  {
+    "name": "Hannah Black",
+    "votes": 0,
+    "voted": false
+  },
+  {
+    "name": "Ian Gray",
+    "votes": 0,
+    "voted": false
+  },
+  {
+    "name": "Julia Adams",
+    "votes": 0,
+    "voted": false
+  }
+]
