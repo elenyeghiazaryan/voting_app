@@ -3,7 +3,7 @@ import os
 import datetime
 from colorama import Fore, Style, init
 
-init(autoreset=True)  
+init(autoreset=True)
 
 DATA_FILE = "people.json"
 LOG_FILE = "log.txt"
@@ -43,7 +43,7 @@ def reset_votes(people):
         person["votes"] = 0
         person["voted"] = False
     save_data(people)
-    open(LOG_FILE, "w").close()  
+    open(LOG_FILE, "w").close()
     print("\n🔄 All votes and statuses have been reset.")
 
 def admin_panel(people):
@@ -66,14 +66,14 @@ def admin_panel(people):
         choice = input("Select an option: ")
 
         if choice == "1":
-            print("\n🔢 VOTES PER PERSON")
+            print("\nVOTES PER PERSON")
             for p in people:
                 print(f"{p['name']}: {p['votes']} votes")
 
         elif choice == "2":
             print("\n📜 VOTING LOG")
             if not os.path.exists(LOG_FILE) or os.path.getsize(LOG_FILE) == 0:
-                print("🕳 No votes have been cast yet.")
+                print("No votes have been cast yet.")
             else:
                 with open(LOG_FILE, "r") as f:
                     print(f.read())
@@ -112,12 +112,18 @@ def main():
     while any(not p["voted"] for p in people):
         print("\n=== VOTER LIST ===")
         for i, person in enumerate(people, 1):
-            status = Fore.RED + "(already voted)" if person["voted"] else ""
+            # status = Fore.RED + "(already voted)" if person["voted"] else ""
+            status = ""
+            if person["voted"]:
+                status = Fore.RED + "(already voted)"
+            else:
+                status = ""
             print(f"{i}. {person['name']} {status}{Style.RESET_ALL}")
 
         voter_input = input("\nWho are you? (choose number, type 'admin' to enter admin panel, or 'q' to quit): ")
 
         if voter_input.lower() == 'q':
+            show_results(people)
             break
         elif voter_input.lower() == 'admin':
             admin_panel(people)
