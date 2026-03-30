@@ -1,8 +1,8 @@
-# 🗳️ Championship Voting System
+#  Championship Voting System
 
 A simple console-based Python voting system where everyone can vote and be voted for. Includes an admin panel to track and manage votes.
 
-## 📦 Features
+##  Features
 
 - Each person can vote only once
 - Cannot vote for yourself
@@ -13,12 +13,12 @@ A simple console-based Python voting system where everyone can vote and be voted
   - See who hasn't voted
   - Reset all data
 
-## 🛠 Requirements
+##  Requirements
 
 - Python 3.6 or higher
 - [`colorama`](https://pypi.org/project/colorama/)
 
-## 📥 Installation
+##  Installation
 
 ```bash
 pip install colorama
